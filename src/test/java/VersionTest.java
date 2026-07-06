@@ -1,4 +1,6 @@
 import me.gorgeousone.tangledmaze.util.Version;
+import me.gorgeousone.tangledmaze.util.VersionUtil;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,6 +11,7 @@ public class VersionTest {
 	
 	@Test
 	void testVersionRegex() {
+		assertEquals(VersionUtil.parseMcVersionSafe("26.2.build.48", null), new Version(26, 2, 0));
 
 		Version v100 = new Version("1.0.0");
 		Version v101 = new Version("1.0.1");

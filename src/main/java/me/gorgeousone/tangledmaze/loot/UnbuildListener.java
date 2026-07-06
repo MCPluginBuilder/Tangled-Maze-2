@@ -2,12 +2,8 @@ package me.gorgeousone.tangledmaze.loot;
 
 import me.gorgeousone.tangledmaze.event.MazeUnbuildEvent;
 import me.gorgeousone.tangledmaze.maze.MazePart;
-import me.gorgeousone.tangledmaze.util.text.TextException;
-import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-
-import java.util.logging.Level;
 
 public class UnbuildListener implements Listener {
 

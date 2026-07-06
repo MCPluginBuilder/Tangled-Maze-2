@@ -1,6 +1,5 @@
 package me.gorgeousone.tangledmaze.render;
 
-import me.gorgeousone.tangledmaze.util.BlockVec;
 import me.gorgeousone.tangledmaze.util.Vec2;
 import me.gorgeousone.tangledmaze.util.blocktype.BlockType;
 import org.bukkit.Bukkit;

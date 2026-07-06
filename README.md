@@ -46,3 +46,4 @@ mvn install:install-file \
   -DgeneratePom=true
 ```
 
+`mvn clean package` to generate plugin jar in previously set directory
