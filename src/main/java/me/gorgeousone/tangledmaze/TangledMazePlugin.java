@@ -63,7 +63,7 @@ public final class TangledMazePlugin extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		instance = this;
-		configureAPI(getDescription().getVersion());
+		configureAPI(getDescription().getVersion(), getLogger());
 
 		sessionHandler = new SessionHandler();
 		toolHandler = new ToolHandler(sessionHandler);
@@ -95,8 +95,8 @@ public final class TangledMazePlugin extends JavaPlugin {
 	/**
 	 * Configures settings needed if the plugin is shaded into a plugin
 	 */
-	public static void configureAPI(String tangledMazeVersion) {
-		VersionUtil.setup(tangledMazeVersion);
+	public static void configureAPI(String tangledMazeVersion, Logger logger) {
+		VersionUtil.setup(tangledMazeVersion, logger);
 	}
 
 	/**
