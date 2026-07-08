@@ -7,23 +7,30 @@ public class Version {
 	int major;
 	int minor;
 	int patch;
-	
+
+	public Version(int major, int minor, int patch) {
+		this.major = major;
+		this.minor = minor;
+		this.patch = patch;
+	}
+
 	public Version(String versionString) {
 		this(versionString, "\\.");
 	}
 	
 	public Version(String versionString, String delimiter) {
+		parseUnsafe(versionString, delimiter);
+	}
+
+	private void parseUnsafe(String versionString, String delimiter) {
 		String[] split = versionString.split(delimiter);
 		major = Integer.parseInt(split[0]);
+
 		if (split.length > 1) {
 			minor = Integer.parseInt(split[1]);
-		} else {
-			minor = 0;
 		}
 		if (split.length > 2) {
 			patch = Integer.parseInt(split[2]);
-		} else {
-			patch = 0;
 		}
 	}
 	

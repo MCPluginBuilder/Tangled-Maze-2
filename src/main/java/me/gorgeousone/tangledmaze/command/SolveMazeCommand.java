@@ -12,7 +12,6 @@ import me.gorgeousone.tangledmaze.render.RenderHandler;
 import me.gorgeousone.tangledmaze.render.RenderSession;
 import org.bukkit.command.CommandSender;
 
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 

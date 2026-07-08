@@ -3,9 +3,7 @@ package me.gorgeousone.tangledmaze.util;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.block.BlockFace;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

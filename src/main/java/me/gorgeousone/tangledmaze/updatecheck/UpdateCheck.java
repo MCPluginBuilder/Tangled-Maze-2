@@ -46,6 +46,7 @@ public class UpdateCheck {
 		InputStream inputStream = new URL(updateInfoPasteUrl).openStream();
 		Scanner scanner = new Scanner(inputStream);
 		UpdateInfo latestUpdate = new UpdateInfo(scanner.nextLine(), resourceName, resourceId);
+		scanner.close();
 		
 		if (VersionUtil.PLUGIN_VERSION.isBelow(latestUpdate.getVersion())) {
 			return latestUpdate;

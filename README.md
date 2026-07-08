@@ -16,9 +16,34 @@ For downloads & more information:
 
 ## Development
 
-To be able to compile the plugin with the [LootChest](https://www.spigotmc.org/resources/lootchest.61564/) dependency, you need to install the LootChest jar file in your local maven repository.
-You can do this by running the following commands in the directory where the LootChest.jar file is located:
-```shell
-mvn install:install-file -Dfile=<path/to/lootchest.jar> -DgroupId=fr.black_eyes.lootchest -DartifactId=lootchest -Dversion=2.5.0 -Dpackaging=jar
-mvn install:install-file -Dfile=<path/to/lootchest.jar> -DgroupId=fr.black_eyes.lootchest -DartifactId=fall_effect -Dversion=2.5.0 -Dpackaging=jar
+To compile the jar directly to the `server/plugins` folder, the pom.xml makes use of a user specific maven property defined in `~/.m2/settings.xml`:
+```xml
+<settings>
+  <profiles>
+    <profile>
+      <id>local-build</id>
+      <properties>
+        <plugin.output.dir>path/to/server/plugins</plugin.output.dir>
+      </properties>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>local-build</activeProfile>
+  </activeProfiles>
+</settings>
 ```
+
+To be able to compile the plugin with the [LootChest](https://www.spigotmc.org/resources/lootchest.61564/) dependency, you need to install the LootChest jar file in your local maven repository:
+
+```shell
+mvn install:install-file \
+  -Dfile=path/to/lootchest.jar \
+  -DgroupId=fr.black_eyes.lootchest \
+  -DartifactId=LootChest \
+  -Dversion=X.X.X \
+  -Dpackaging=jar \
+  -DgeneratePom=true
+```
+
+`mvn clean package` to generate plugin jar in previously set directory

@@ -4,7 +4,6 @@ import me.gorgeousone.tangledmaze.generation.GridCell;
 import me.gorgeousone.tangledmaze.generation.GridMap;
 import me.gorgeousone.tangledmaze.util.Direction;
 import me.gorgeousone.tangledmaze.util.Vec2;
-import org.bukkit.block.BlockFace;
 
 import java.util.ArrayList;
 import java.util.Comparator;
